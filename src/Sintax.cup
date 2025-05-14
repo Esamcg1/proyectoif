@@ -1,0 +1,32 @@
+parser code {:
+  public void syntax_error(Symbol s) {
+    System.out.println("Error sintáctico en línea " + s.left + ", columna " + s.right + ": " + s.value);
+  }
+:};
+
+terminal IF, PAR_A, PAR_C, PUNTOYCOMA;
+terminal OP_EQ, OP_LT, OP_GT, OP_LE, OP_GE;
+terminal TRUE, FALSE;
+terminal Integer NUM;
+terminal String ID;
+
+non terminal S, I, C, O, V;
+
+start with S;
+
+S ::= S I
+    | I;
+
+I ::= IF PAR_A C PAR_C PUNTOYCOMA;
+
+C ::= ID O V;
+
+O ::= OP_EQ
+    | OP_LT
+    | OP_GT
+    | OP_LE
+    | OP_GE;
+
+V ::= NUM
+    | TRUE
+    | FALSE;
