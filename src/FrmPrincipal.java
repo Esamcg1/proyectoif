@@ -24,7 +24,7 @@ public class FrmPrincipal extends JFrame {
         mainPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         mainPanel.setBackground(new Color(230, 240, 255)); // Azul pastel claro
 
-        // Área de entrada
+        // entrada del area 
         JLabel lblEntrada = new JLabel("Código de entrada:");
         lblEntrada.setFont(fuente);
         txtEntrada = new JTextArea(10, 50);
@@ -35,7 +35,7 @@ public class FrmPrincipal extends JFrame {
         txtEntrada.setBorder(BorderFactory.createLineBorder(new Color(100, 100, 200), 1));
         JScrollPane scrollEntrada = new JScrollPane(txtEntrada);
 
-        // Área de resultado
+        // area para mostrar los resultados
         JLabel lblResultado = new JLabel("Resultado del análisis:");
         lblResultado.setFont(fuente);
         txtResultado = new JTextArea(10, 50);
